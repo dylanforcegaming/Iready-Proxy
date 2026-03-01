@@ -1,0 +1,182 @@
+<!-- i-Ready Mobile Helper - Simple Weebly Version -->
+<!-- This version provides direct links since iframe embedding is blocked -->
+
+<style>
+  .iready-container {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    max-width: 500px;
+    margin: 0 auto;
+    background: linear-gradient(145deg, #0f172a, #1e1b4b);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    color: white;
+  }
+  
+  .iready-header {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+  .iready-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #22c55e, #059669);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-size: 32px;
+    box-shadow: 0 10px 20px rgba(34, 197, 94, 0.3);
+  }
+  
+  .iready-header h2 {
+    margin: 0 0 6px;
+    font-size: 24px;
+  }
+  
+  .iready-header p {
+    margin: 0;
+    color: rgba(255,255,255,0.6);
+    font-size: 14px;
+  }
+  
+  .iready-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .iready-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: all 0.2s;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  
+  .iready-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
+  
+  .iready-link.green {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+  }
+  
+  .iready-link.green:hover {
+    background: linear-gradient(135deg, #16a34a, #15803d);
+  }
+  
+  .iready-link.blue {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+  }
+  
+  .iready-link.blue:hover {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  }
+  
+  .iready-link.purple {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  }
+  
+  .iready-link.purple:hover {
+    background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  }
+  
+  .iready-link-icon {
+    font-size: 20px;
+  }
+  
+  .iready-link-arrow {
+    margin-left: auto;
+    opacity: 0.7;
+  }
+  
+  .iready-tip {
+    background: rgba(234, 179, 8, 0.15);
+    border: 1px solid rgba(234, 179, 8, 0.3);
+    border-radius: 12px;
+    padding: 16px;
+  }
+  
+  .iready-tip-title {
+    color: #eab308;
+    font-weight: 700;
+    font-size: 14px;
+    margin: 0 0 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .iready-tip-text {
+    color: rgba(255,255,255,0.8);
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  .iready-tip-text strong {
+    color: white;
+  }
+  
+  .iready-steps {
+    margin-top: 12px;
+    padding-left: 16px;
+  }
+  
+  .iready-steps li {
+    color: rgba(255,255,255,0.7);
+    font-size: 12px;
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+</style>
+
+<div class="iready-container">
+  <div class="iready-header">
+    <div class="iready-icon">📱</div>
+    <h2>i-Ready Mobile</h2>
+    <p>Quick access to i-Ready on your phone</p>
+  </div>
+  
+  <div class="iready-links">
+    <a href="https://login.i-ready.com" target="_blank" class="iready-link green">
+      <span class="iready-link-icon">🎓</span>
+      <span>i-Ready Login</span>
+      <span class="iready-link-arrow">→</span>
+    </a>
+    
+    <a href="https://launchpad.classlink.com" target="_blank" class="iready-link blue">
+      <span class="iready-link-icon">🔐</span>
+      <span>ClassLink SSO</span>
+      <span class="iready-link-arrow">→</span>
+    </a>
+    
+    <a href="https://www.i-ready.com" target="_blank" class="iready-link purple">
+      <span class="iready-link-icon">📊</span>
+      <span>i-Ready Dashboard</span>
+      <span class="iready-link-arrow">→</span>
+    </a>
+  </div>
+  
+  <div class="iready-tip">
+    <p class="iready-tip-title">💡 Getting "Desktop Only" Error?</p>
+    <p class="iready-tip-text">
+      i-Ready sometimes blocks mobile browsers. Here's how to fix it:
+    </p>
+    <ol class="iready-steps">
+      <li><strong>Chrome:</strong> Tap ⋮ menu → Check "Desktop site"</li>
+      <li><strong>Safari:</strong> Tap <strong>AA</strong> button → "Request Desktop Website"</li>
+      <li><strong>Samsung:</strong> Tap ☰ → "Desktop site"</li>
+    </ol>
+  </div>
+</div>

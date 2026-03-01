@@ -1,0 +1,525 @@
+<!-- i-Ready Mobile Proxy - Weebly Compatible Version -->
+<!-- Paste this entire code into a Weebly "Embed Code" block -->
+
+<style>
+  .iready-proxy-container {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    max-width: 100%;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+  
+  .iready-header {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .iready-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .iready-icon {
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, #22c55e, #059669);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+  }
+  
+  .iready-title {
+    color: white;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  .iready-subtitle {
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+    font-size: 12px;
+  }
+  
+  .iready-mode-toggle {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  
+  .iready-btn {
+    flex: 1;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  
+  .iready-btn-mobile {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .iready-btn-mobile.active {
+    background: #22c55e;
+    color: white;
+  }
+  
+  .iready-btn-desktop {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .iready-btn-desktop.active {
+    background: #3b82f6;
+    color: white;
+  }
+  
+  .iready-url-bar {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .iready-input {
+    flex: 1;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .iready-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  
+  .iready-input:focus {
+    border-color: #22c55e;
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+  }
+  
+  .iready-go-btn {
+    padding: 12px 20px;
+    background: #22c55e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .iready-go-btn:hover {
+    background: #16a34a;
+  }
+  
+  .iready-content {
+    padding: 20px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .iready-welcome {
+    text-align: center;
+    color: white;
+  }
+  
+  .iready-welcome-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 40px;
+  }
+  
+  .iready-welcome h2 {
+    margin: 0 0 8px;
+    font-size: 24px;
+  }
+  
+  .iready-welcome p {
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0 0 24px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .iready-quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .iready-link-btn {
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .iready-link-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  .iready-link-btn.green {
+    background: #22c55e;
+    border-color: #22c55e;
+  }
+  
+  .iready-link-btn.green:hover {
+    background: #16a34a;
+  }
+  
+  .iready-link-btn.blue {
+    background: #3b82f6;
+    border-color: #3b82f6;
+  }
+  
+  .iready-link-btn.blue:hover {
+    background: #2563eb;
+  }
+  
+  .iready-device-frame {
+    background: #1e293b;
+    border-radius: 32px;
+    padding: 12px;
+    box-shadow: 
+      0 25px 50px -12px rgba(0, 0, 0, 0.5),
+      0 0 0 1px rgba(255, 255, 255, 0.1),
+      inset 0 2px 4px rgba(255, 255, 255, 0.1);
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .iready-device-notch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 24px;
+    background: #1e293b;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    z-index: 10;
+  }
+  
+  .iready-device-home {
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    z-index: 10;
+  }
+  
+  .iready-iframe-container {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .iready-iframe-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+  
+  .iready-loading {
+    position: absolute;
+    inset: 0;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+  }
+  
+  .iready-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #22c55e;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  .iready-loading p {
+    margin-top: 12px;
+    color: #64748b;
+    font-size: 14px;
+  }
+  
+  .iready-footer {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 12px 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+  }
+  
+  .iready-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .iready-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #22c55e;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  
+  .iready-note {
+    background: rgba(234, 179, 8, 0.1);
+    border: 1px solid rgba(234, 179, 8, 0.3);
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 16px;
+    text-align: left;
+  }
+  
+  .iready-note-title {
+    color: #eab308;
+    font-weight: 600;
+    font-size: 13px;
+    margin: 0 0 4px;
+  }
+  
+  .iready-note-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    margin: 0;
+    line-height: 1.4;
+  }
+  
+  .iready-hidden {
+    display: none !important;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 480px) {
+    .iready-url-bar {
+      flex-direction: column;
+    }
+    
+    .iready-quick-links {
+      flex-direction: column;
+    }
+    
+    .iready-link-btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>
+
+<div class="iready-proxy-container" id="ireadyProxy">
+  <!-- Header -->
+  <div class="iready-header">
+    <div class="iready-logo">
+      <div class="iready-icon">📱</div>
+      <div>
+        <h1 class="iready-title">i-Ready Mobile</h1>
+        <p class="iready-subtitle">Mobile-Friendly Access</p>
+      </div>
+    </div>
+    
+    <!-- Mode Toggle -->
+    <div class="iready-mode-toggle">
+      <button class="iready-btn iready-btn-mobile active" onclick="setMode('mobile')" id="btnMobile">
+        📱 Mobile
+      </button>
+      <button class="iready-btn iready-btn-desktop" onclick="setMode('desktop')" id="btnDesktop">
+        💻 Desktop
+      </button>
+    </div>
+    
+    <!-- URL Bar -->
+    <div class="iready-url-bar">
+      <input 
+        type="text" 
+        class="iready-input" 
+        id="urlInput"
+        placeholder="Enter URL (e.g., login.i-ready.com)"
+        onkeypress="if(event.key==='Enter')navigate()"
+      >
+      <button class="iready-go-btn" onclick="navigate()">Go →</button>
+    </div>
+  </div>
+  
+  <!-- Content Area -->
+  <div class="iready-content" id="contentArea">
+    <!-- Welcome Screen -->
+    <div class="iready-welcome" id="welcomeScreen">
+      <div class="iready-welcome-icon">🎓</div>
+      <h2>i-Ready Mobile Access</h2>
+      <p>Access i-Ready on your mobile device. Choose an option below or enter a URL above.</p>
+      
+      <div class="iready-quick-links">
+        <a href="https://login.i-ready.com" target="_blank" class="iready-link-btn green">
+          🔗 i-Ready Login
+        </a>
+        <a href="https://launchpad.classlink.com" target="_blank" class="iready-link-btn blue">
+          🔗 ClassLink SSO
+        </a>
+        <a href="https://www.i-ready.com" target="_blank" class="iready-link-btn">
+          🔗 i-Ready Dashboard
+        </a>
+      </div>
+      
+      <div class="iready-note">
+        <p class="iready-note-title">💡 Tip for Mobile Use:</p>
+        <p class="iready-note-text">
+          If i-Ready says "desktop only," open the link in your browser and tap 
+          <strong>"Request Desktop Site"</strong> in the menu (Chrome: ⋮ | Safari: AA button).
+        </p>
+      </div>
+    </div>
+    
+    <!-- Iframe Container (hidden by default) -->
+    <div class="iready-device-frame iready-hidden" id="deviceFrame">
+      <div class="iready-device-notch"></div>
+      <div class="iready-iframe-container" id="iframeContainer">
+        <div class="iready-loading" id="loadingIndicator">
+          <div class="iready-spinner"></div>
+          <p>Loading...</p>
+        </div>
+        <iframe id="proxyFrame" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation"></iframe>
+      </div>
+      <div class="iready-device-home"></div>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <div class="iready-footer">
+    <div>Mode: <span id="modeDisplay" style="color: #22c55e;">Mobile</span></div>
+    <div class="iready-status">
+      <div class="iready-status-dot"></div>
+      <span id="statusText">Ready</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  let currentMode = 'mobile';
+  let currentUrl = '';
+  
+  function setMode(mode) {
+    currentMode = mode;
+    document.getElementById('btnMobile').classList.toggle('active', mode === 'mobile');
+    document.getElementById('btnDesktop').classList.toggle('active', mode === 'desktop');
+    document.getElementById('modeDisplay').textContent = mode.charAt(0).toUpperCase() + mode.slice(1);
+    
+    const frame = document.getElementById('deviceFrame');
+    const container = document.getElementById('iframeContainer');
+    
+    if (mode === 'mobile') {
+      frame.style.maxWidth = '375px';
+      frame.style.width = '100%';
+      container.style.height = '667px';
+    } else {
+      frame.style.maxWidth = '100%';
+      frame.style.width = '100%';
+      container.style.height = '600px';
+    }
+  }
+  
+  function navigate() {
+    let url = document.getElementById('urlInput').value.trim();
+    if (!url) return;
+    
+    if (!url.startsWith('http')) {
+      url = 'https://' + url;
+    }
+    
+    currentUrl = url;
+    
+    // Show iframe, hide welcome
+    document.getElementById('welcomeScreen').classList.add('iready-hidden');
+    document.getElementById('deviceFrame').classList.remove('iready-hidden');
+    document.getElementById('loadingIndicator').classList.remove('iready-hidden');
+    document.getElementById('statusText').textContent = 'Loading...';
+    
+    // Set iframe dimensions based on mode
+    setMode(currentMode);
+    
+    // Load URL
+    const frame = document.getElementById('proxyFrame');
+    frame.src = url;
+    
+    // Hide loading after iframe loads (or times out)
+    frame.onload = function() {
+      document.getElementById('loadingIndicator').classList.add('iready-hidden');
+      document.getElementById('statusText').textContent = 'Connected';
+    };
+    
+    frame.onerror = function() {
+      document.getElementById('loadingIndicator').classList.add('iready-hidden');
+      document.getElementById('statusText').textContent = 'Error - Try Direct Link';
+    };
+    
+    // Timeout fallback
+    setTimeout(function() {
+      document.getElementById('loadingIndicator').classList.add('iready-hidden');
+    }, 3000);
+  }
+  
+  // Initialize mobile mode
+  setMode('mobile');
+</script>
